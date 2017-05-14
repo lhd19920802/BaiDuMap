@@ -21,7 +21,7 @@ public class HelloBaiduMapActivity extends Activity
     private MapController mapController;
     private int latitude= (int) (40.051*1E6);
     private int longitude= (int) (116.303*1E6);
-    private com.baidu.platform.comapi.basestruct.GeoPoint geoPoint=new GeoPoint(latitude, longitude);;
+    private com.baidu.platform.comapi.basestruct.GeoPoint geoPoint=new GeoPoint(latitude, longitude);
 
 
 
