@@ -9,6 +9,14 @@ import com.baidu.mapapi.MKGeneralListener;
 import com.baidu.mapapi.map.MKEvent;
 import com.baidu.mapapi.map.MapController;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.search.MKAddrInfo;
+import com.baidu.mapapi.search.MKBusLineResult;
+import com.baidu.mapapi.search.MKDrivingRouteResult;
+import com.baidu.mapapi.search.MKPoiResult;
+import com.baidu.mapapi.search.MKSearchListener;
+import com.baidu.mapapi.search.MKSuggestionResult;
+import com.baidu.mapapi.search.MKTransitRouteResult;
+import com.baidu.mapapi.search.MKWalkingRouteResult;
 import com.baidu.platform.comapi.basestruct.GeoPoint;
 import com.lhd.baidumap.utils.Constants;
 
@@ -45,10 +53,14 @@ public class BaseActivity extends Activity
         mapview_main = (MapView) findViewById(R.id.mapview_main);
         //设置是否启用内置的缩放控件
         mapview_main.setBuiltInZoomControls(true);
+
+        //卫星图
+        mapview_main.setSatellite(true);
+        mapview_main.setTraffic(false);
         mapController = mapview_main.getController();
 
         //设置地图的缩放级别
-        mapController.setZoom(12);
+        mapController.setZoom(19);
 
         mapController.setCenter(geoPoint);
 
@@ -105,6 +117,58 @@ public class BaseActivity extends Activity
         super.onDestroy();
         mapview_main.destroy();
 
+    }
+
+    class MySearchListener implements MKSearchListener
+
+    {
+        @Override
+        public void onGetPoiResult(MKPoiResult result, int type, int iError)
+        {
+
+        }
+
+        @Override
+        public void onGetTransitRouteResult(MKTransitRouteResult result, int iError)
+        {
+
+        }
+
+        @Override
+        public void onGetDrivingRouteResult(MKDrivingRouteResult result, int iError)
+        {
+
+        }
+
+        @Override
+        public void onGetWalkingRouteResult(MKWalkingRouteResult result, int iError)
+        {
+
+        }
+
+        @Override
+        public void onGetAddrResult(MKAddrInfo result, int iError)
+        {
+
+        }
+
+        @Override
+        public void onGetBusDetailResult(MKBusLineResult result, int iError)
+        {
+
+        }
+
+        @Override
+        public void onGetSuggestionResult(MKSuggestionResult result, int iError)
+        {
+
+        }
+
+        @Override
+        public void onGetPoiDetailSearchResult(int type, int iError)
+        {
+
+        }
     }
 
 }

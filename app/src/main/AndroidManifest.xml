@@ -39,6 +39,20 @@
         </activity>
         <activity android:name=".MarkerOverlayActivity">
         </activity>
+        <activity android:name=".SearchInBoundActivity">
+        </activity>
+        <activity android:name=".SearchInCityActivity">
+        </activity>
+        <activity android:name=".DrivingSearchActivity">
+        </activity>
+        <activity android:name=".WalkingSearchActivity">
+        </activity>
+        <activity android:name=".TransitSearchActivity">
+        </activity>
+        <activity android:name=".LocationActivity">
+        </activity>
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+        </service>
     </application>
 
 </manifest>
